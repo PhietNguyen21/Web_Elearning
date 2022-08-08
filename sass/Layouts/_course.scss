@@ -1,0 +1,61 @@
+.course{
+    margin: $mg-1;
+    .course__content{
+        width: 90%;
+        margin: 0 auto;
+        .row{
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .course__left{
+            background-color: $color-gray-1;
+            padding: $pd-3 + 4;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            h2{
+                @include styleText($color-black-0,$fs-3 + 1,$fw-0);
+            }
+        }
+        .course__right{
+             position: relative;
+           .nav-tabs{
+               margin-bottom: $mg-1 + 5;
+            li{
+                a{
+                    text-decoration: none;
+                    border: none;
+                    @include styleText($color-black-0,$fs-0,$fw-0);
+                    &:focus{
+                        border-bottom: 5px solid $color-blue-0;
+                    }
+
+                    &:hover{
+                        color: $color-blue-0;
+                    }
+                }
+                .active{
+                    border-bottom: 5px solid $color-blue-0;
+                }
+             }
+           }
+        }
+    }
+    @include reponsive('screen-1'){
+        .card{
+            .card-body{ 
+                .card-title{
+                    @include styleText($color-black-0,$fs-1,$fw-1);
+                    margin-bottom: $mg-0 + 5;
+                }
+    }
+}
+    }
+    @include reponsive('medium'){
+        .course__content{
+            .course__left{
+                padding: $pd-0 0;
+            }
+        }
+    }
+}

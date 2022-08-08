@@ -1,0 +1,16 @@
+.darkMode{
+    .partners{
+        background-color: $color-dark-6;
+        margin-top: 0;
+        .partners__bot{
+            .col__left{
+                border-right: 1px solid $color-dark-2;
+            }
+            .col__item{
+                p:first-of-type{
+                    color: $color-white-0;
+                }
+            }
+        }
+    }
+}

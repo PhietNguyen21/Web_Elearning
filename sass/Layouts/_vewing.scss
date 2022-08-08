@@ -1,0 +1,19 @@
+.viewing__content{
+    width: 90%;
+    margin: 0 auto;
+    .owl-carousel{
+        .card{
+            width: 100%;
+        }
+    }
+    @include reponsive('screen-1'){
+        .card{
+            .card-body{ 
+                .card-title{
+                    @include styleText($color-black-0,$fs-1,$fw-1);
+                    margin-bottom: $mg-0 + 5;
+                }
+    }
+}
+    }
+}

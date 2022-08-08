@@ -1,0 +1,40 @@
+.owl-carousel .owl-nav button.owl-prev{
+    position: absolute;
+   width: 44px;
+   height: 44px;
+   font-size: $fs-5;
+   border-radius: 50%;
+   background-color:$color-white-0;
+   color: $color-blue-0;
+   box-shadow: 0 2px 8px 2px $color-black-2;
+   top: 50%;
+   left:-30px;
+   transform: translateY(-50%);
+   &:focus{
+       outline: none;
+   }
+   &:hover{
+    background-color: $color-white-0;
+    color: $color-blue-0;
+    }
+  }
+  .owl-carousel .owl-nav button.owl-next{
+   position: absolute;
+   width: 44px;
+   height: 44px;
+   font-size: $fs-5;
+   border-radius: 50%;
+   background-color:$color-white-0;
+   color: $color-blue-0;
+   box-shadow: 0 2px 8px 2px $color-black-2;
+   top: 50%;
+   right:-30px;
+   transform: translateY(-50%);
+   &:focus{
+       outline: none;
+   }
+   &:hover{
+    background-color: $color-white-0;
+    color: $color-blue-0;
+    }
+  }

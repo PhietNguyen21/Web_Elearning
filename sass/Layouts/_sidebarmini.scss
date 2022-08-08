@@ -1,0 +1,68 @@
+.sidebarmini {
+    position: fixed;
+    top: 25%;
+    right: 0;
+    z-index: 500;
+    transform: translateX(100%);
+    transition: all .5s;
+    .sidebar__button {
+        position: fixed;
+        transform: translateX(-100%);
+        @include styleButton($color-black-0, $color-gray-4, $color-gray-4, $fs-5, $fw-0, $pd-2, $pd-3);
+        border-radius: 8px 0 0 8px;
+        border: none;
+        transition: all .5s;
+        &:focus{
+            outline: none;
+        }
+    }
+    .sidebar__content {
+        background-color: $color-gray-4;
+        border-left: none;
+        text-align: center;
+        padding: 5px 20px;
+        transition: all .5s;
+        h2{
+            @include styleText($color-black-0, $fs-0, $fw-0);
+        }
+        .switch{
+            position: relative;
+            height: 24px;
+            width: 47px;
+            margin: 0 10px;
+            cursor: pointer;
+            input{
+                display: none;
+                &:checked +.slider{
+                    &::before{
+                        transform: translateX(22px);
+                    }
+                }
+            }
+           .slider{
+               position:absolute;
+               top: 0;
+               left: 0;
+               right: 0;
+               bottom: 0;
+               background-color: #cccccc;
+               border-radius: 34px;
+              &::before{
+                  content: '';
+                  display: inline-block;
+                  height: 24px;
+                  width: 24px;
+                  border-radius: 50%;
+                  position: absolute;
+                  background-color:$color-white-0;
+                  top: 0;
+                  left:5%;
+                  transition: all .5s;
+              }
+           }
+        }
+    }
+    &.is-opened{
+        transform: translateX(0%);
+    }
+}
